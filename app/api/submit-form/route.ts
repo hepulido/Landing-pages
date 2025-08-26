@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
         console.log('Tally submission failed:', response.status)
       }
     } catch (error) {
-      console.log('Tally submission error:', error.message)
+      console.log('Tally submission error:', error instanceof Error ? error.message : 'Unknown error')
     }
 
     return NextResponse.json({ 
