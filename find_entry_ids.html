@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Google Form Entry IDs</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .instructions { background: #f0f0f0; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .step { margin: 10px 0; }
+        .code { background: #e0e0e0; padding: 5px; border-radius: 3px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>How to Find Google Form Entry IDs</h1>
+    
+    <div class="instructions">
+        <h2>Step-by-Step Instructions:</h2>
+        
+        <div class="step">
+            <strong>1.</strong> Go to your Google Form: 
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScHjs-Oz6zbyxL15WNd9yMg0jQvd-5m8OjvZPMEQa7p_uPhgA/viewform" target="_blank">
+                Open Form
+            </a>
+        </div>
+        
+        <div class="step">
+            <strong>2.</strong> Right-click on the form and select "View Page Source" (or press F12)
+        </div>
+        
+        <div class="step">
+            <strong>3.</strong> In the source code, press Ctrl+F (or Cmd+F on Mac) and search for: <span class="code">entry.</span>
+        </div>
+        
+        <div class="step">
+            <strong>4.</strong> Look for lines like: <span class="code">name="entry.1234567890"</span>
+        </div>
+        
+        <div class="step">
+            <strong>5.</strong> Note down the entry IDs for each field:
+            <ul>
+                <li>Name field: entry._______</li>
+                <li>Business field: entry._______</li>
+                <li>Phone field: entry._______</li>
+                <li>Email field: entry._______</li>
+                <li>City field: entry._______</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <strong>6.</strong> Once you have the entry IDs, I'll update the API route with the correct ones.
+        </div>
+    </div>
+    
+    <h2>Alternative Method:</h2>
+    <p>If you can't find the entry IDs in the source code, you can also:</p>
+    <ol>
+        <li>Fill out your form manually once</li>
+        <li>Check the "Responses" tab in your Google Form</li>
+        <li>Look at the column headers - they might show the entry IDs</li>
+    </ol>
+    
+    <h2>Quick Test:</h2>
+    <p>You can also test the form submission directly by visiting this URL (replace with your actual entry IDs):</p>
+    <p class="code">
+        https://docs.google.com/forms/d/e/1FAIpQLScHjs-Oz6zbyxL15WNd9yMg0jQvd-5m8OjvZPMEQa7p_uPhgA/formResponse?entry.1234567890=TestName&entry.1234567891=TestBusiness&entry.1234567892=1234567890&entry.1234567893=test@example.com&entry.1234567894=TestCity
+    </p>
+</body>
+</html> 
