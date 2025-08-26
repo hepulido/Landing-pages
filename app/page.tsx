@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 
 export default function Home() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -33,12 +34,12 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
       {/* Language Switcher */}
       <div className="flex justify-end p-6">
-        <a 
+        <Link 
           href="/es"
           className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-sm"
         >
           Español
-        </a>
+        </Link>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
@@ -59,7 +60,7 @@ export default function Home() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Instant text-back, voicemail summaries, and "who to call first" alerts.<br />
+            Instant text-back, voicemail summaries, and &ldquo;who to call first&rdquo; alerts.<br />
             <span className="font-semibold text-gray-900">Works with your current number. No new phone system.</span>
           </p>
 
@@ -104,7 +105,7 @@ export default function Home() {
 
         {/* Who It's For Section */}
         <div className="mb-20 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Who it's for</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Who it&apos;s for</h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
             Perfect for plumbers, HVAC, electricians, auto repair, medical clinics, dentists — and works great for salons, restaurants, real estate, cleaning services too.
           </p>
@@ -127,7 +128,7 @@ export default function Home() {
                 <span className="text-2xl font-bold text-blue-600">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Missed call? We auto-text the caller</h3>
-              <p className="text-gray-600">We auto-text the caller so you don't lose the lead.</p>
+              <p className="text-gray-600">We auto-text the caller so you don&apos;t lose the lead.</p>
             </div>
             
             <div className="text-center">
@@ -135,7 +136,7 @@ export default function Home() {
                 <span className="text-2xl font-bold text-blue-600">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Voicemail to summary</h3>
-              <p className="text-gray-600">We transcribe and detect intent (e.g., "emergency", "quote request").</p>
+              <p className="text-gray-600">We transcribe and detect intent (e.g., &ldquo;emergency&rdquo;, &ldquo;quote request&rdquo;).</p>
             </div>
             
             <div className="text-center">
@@ -159,7 +160,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Capture jobs you'd normally lose</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Capture jobs you&apos;d normally lose</h3>
             </div>
             
             <div className="bg-white rounded-xl p-6 shadow-lg text-center">

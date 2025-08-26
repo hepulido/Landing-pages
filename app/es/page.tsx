@@ -1,44 +1,19 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
+import Link from 'next/link'
 
-export default function Home() {
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50 flex items-center justify-center">
-        <div className="max-w-md mx-auto text-center p-8">
-          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">¡Gracias por registrarte!</h2>
-          <p className="text-lg text-gray-600 mb-6">
-            Te contactaremos en las próximas 24 horas para configurar tu prueba gratuita.
-          </p>
-          <button
-            onClick={() => setIsSubmitted(false)}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Enviar otro registro
-          </button>
-        </div>
-      </div>
-    )
-  }
-
+export default function HomeES() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
       {/* Language Switcher */}
       <div className="flex justify-end p-6">
-        <a 
+        <Link 
           href="/"
           className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-sm"
         >
           English
-        </a>
+        </Link>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
@@ -59,7 +34,7 @@ export default function Home() {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            SMS instantáneo, resúmenes de buzón de voz y alertas de "a quién llamar primero".<br />
+            SMS instantáneo, resúmenes de buzón de voz y alertas de &ldquo;a quién llamar primero&rdquo;.<br />
             <span className="font-semibold text-gray-900">Funciona con tu número actual. Sin cambiar de sistema.</span>
           </p>
 
@@ -135,7 +110,7 @@ export default function Home() {
                 <span className="text-2xl font-bold text-blue-600">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Buzón de voz a resumen</h3>
-              <p className="text-gray-600">Transcribimos y detectamos la intención (ej., "emergencia", "solicitud de cotización").</p>
+              <p className="text-gray-600">Transcribimos y detectamos la intención (ej., &ldquo;emergencia&rdquo;, &ldquo;solicitud de cotización&rdquo;).</p>
             </div>
             
             <div className="text-center">
